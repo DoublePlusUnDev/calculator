@@ -38,9 +38,15 @@ function evaluate(expression) {
         }
 
         if (token === "("){
-            let end = expression.length - 1
-            while (expression[end] !== ")"){
-                end--
+            let pCount = 1
+            let end = i
+            while (pCount !== 0 && end < expression.length){
+                end++
+                
+                if (expression[end] == "(")
+                    pCount++
+                else if (expression[end] == ")")
+                    pCount--
             }
 
             return evaluate([...expression.slice(0, i), evaluate(expression.slice(i + 1, end)), ...expression.slice(end + 1)])
