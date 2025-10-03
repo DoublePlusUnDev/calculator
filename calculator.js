@@ -156,4 +156,14 @@ function lex(string) {
     return expression
 }
 
-console.log(process("3 * -5"))
+function updateValue(value){
+    console.log("something");
+    
+    result.textContent = `Result: ${value}`
+}
+
+const result = document.querySelector(".result")
+
+const form = document.querySelector("form")
+const input = form.querySelector("input")
+input.addEventListener("input", () => {updateValue(process(input.value))})

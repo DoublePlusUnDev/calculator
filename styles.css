@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+p{
+    font-size: 40px;
+}
+
+input{
+    background-color: whitesmoke;
+    border-color: black;
+    font-size: 16px;
+}
